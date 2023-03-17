@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyCloud</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/shepherd.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="main-dashboard min-h-100 main-success">
+    <div class="top-bar-main d-flex justify-content-between" style="padding: 0 25px ;background:#0077b5;color: #fff;">
+        <img src="assets/images/logo.PNG" style="padding: 2px 0;">
+        <div class="top-bar-cta d-flex align-items-center ps-2" style="border-left: 1px solid #fff;">
+            <img src="assets/images/top-bar-cta.PNG">
+        </div>
+    </div>
+    <div class="menu-bar" style="background-color:#dcdddd;padding: 0px 40px;color: #0077b5;">
+        <ul class="d-flex align-items-center" style="list-style: none;padding:0;margin:0;">
+            <li class="me-2">
+                <img src="assets/images/my-report.PNG" class="me-1">
+                <p class="m-0">My Reports</p>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">My Account</p>
+            </li>
+            <li class="me-2 third-step">
+                <img src="assets/images/request.PNG" class="me-1">
+                <img src="assets/images/request-active.PNG" class="me-1 d-none">
+                <p class="m-0">Request</p>
+                <div class="sub-menu" id="third-step">
+                    <a href="3.html" class="m-0 d-block">Request Service Catalog</a>
+                </div>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/help.PNG" class="me-1">
+                <p class="m-0">Help</p>
+            </li>
+        </ul>
+    </div>
+    <div class="container-type" style="padding: 0 15px;">
+        <img src="assets/images/request-submit.jpg" class="request-img">
+        <div class="request-submit">
+            <div class="modal-table">
+                <h5>Request Detail</h5>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Request No</td>
+                            <td>Dryice002577</td>
+                            <td>Location Name</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Request Date(mm/dd/yyyy)</td>
+                            <td>09/30/2022</td>
+                            <td>Catalog Name</td>
+                            <td class="clr-primary-blue">3 Tier Blueprint - Redhat Linux 7.8</td>
+                        </tr>
+                        <tr>
+                            <td>Region Name</td>
+                            <td>eastus</td>
+                            <td>Provisioning Endpoint</td>
+                            <td>DryiceMyCloudAzureRM</td>
+                        </tr>
+                        <tr>
+                            <td>Requester Name</td>
+                            <td>Dryice Requester</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-table" style="margin-bottom: 12px;">
+                <h5>Item: 1</h5>
+                <div class="tab-table">
+                    <ul class="nav catalog-form-tab" role="tablist">
+                        <li>
+                        <a class="active">General Configuration</a>
+                        </li>
+                        <li>
+                        <a>Web Server Configuration</a>
+                        </li>
+                        <li>
+                        <a>App Server Configuration</a>
+                        </li>
+                        <li>
+                        <a>DB Server Configuration</a>
+                        </li>
+                        <li>
+                        <a>Tags</a>
+                        </li>
+                    </ul>
+                    <div class="table-wrapper">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Requested By</td>
+                                    <td>Dryice Requester</td>
+                                    <td>Requested For</td>
+                                    <td>DryiceMyCloudAzureRM</td>
+                                </tr>
+                                <tr>
+                                    <td>Email Address</td>
+                                    <td>DryiceRequester@hcl.com</td>
+                                    <td>Application Name</td>
+                                    <td>It-Helpdesk</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Unit</td>
+                                    <td>IT Operations</td>
+                                    <td>Assignment Code/Cost Center</td>
+                                    <td>141500/OIOM</td>
+                                </tr>
+                                <tr>
+                                    <td>Server Environment</td>
+                                    <td>Development</td>
+                                    <td>Lease Period</td>
+                                    <td>Day(s)</td>
+                                </tr>
+                                <tr>
+                                    <td>Service Plan</td>
+                                    <td>Bronze</td>
+                                    <td>Lease Period Value</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>Additional Owner Details</td>
+                                    <td></td>
+                                    <td>Additional Owner Details</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="approval-history">
+                <h5>Approval History</h5>
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>Request ID</td>
+                            <td>Date</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="assets/images/request-submit-add.jpg"></td>
+                            <td>Dryice002577</td>
+                            <td></td>
+                            <td>Pending Approval</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-grey-dark">New Request</a>
+                <a href="javascript:void(0)" class="btn btn-grey-dark" id="close-tour">Close</a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright" style="background-color:#0077b5;padding: 7px 40px;color: #fff;">
+        <p class="mb-0">Copyright © 2013, 2022 HCL Technologies Limited</p>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/shepherd.min.js"></script>
+<script>
+    const tour = new Shepherd.Tour({
+        useModalOverlay: true,
+        defaultStepOptions: {
+        classes: 'shadow-md bg-purple-dark',
+        scrollTo: true
+        }
+    });
+    tour.addSteps([
+        {
+            arrow: false,
+            text: "Hurray! You've successfully raised a provisioning request. Now let's go back to the dashboard",
+            attachTo: {
+                element: '#close-tour',
+                on: 'right',
+            },
+            classes: 'close-tour btn-none',
+            highlightClass: 'highlight-layer',
+            modalOverlayOpeningPadding: 2
+        }
+        
+    ]);
+    tour.start();
+</script>
+</body>
+</html>

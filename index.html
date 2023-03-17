@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login | Mc Dryice</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/shepherd.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="login">
+    <div class="login-page">
+        <div class="top-bar">
+            <div class="container">
+                <p>English (US)</p>
+            </div>
+        </div>
+        <div class="login-main">
+            <div class="login-content">
+                <div class="logo">
+                    <img src="assets/images/login-logo.png" alt="MC Dryice" width="500" height="136">
+                </div>
+                <div class="login-form">
+                    <form action="">
+                        <div class="form-group">
+                            <span class="input-icon user-email-ico"></span>
+                            <input type="email" name="user-email" id="user-email" placeholder="User Email ID" readonly value="dryicerequester@hcl.com"> 
+                        </div>
+                        <div class="form-group">
+                            <span class="input-icon user-pass-ico"></span>
+                            <input type="password" name="user-pass" id="user-pass" placeholder="User Password" readonly value="12345678">
+                        </div>
+                        <div id="login-submit">
+                            <a href="2.html" class="btn btn-primary">Login</a>
+                        </div>
+                        <p class="btn btn-link">Back</p>
+                    </form>
+                </div>
+            </div>
+            <footer>
+                <p class="copyright">Copyright Ⓒ 2013, 2022 HCL Technologies Limited | Supported Browsers Google Chrome, Firefox and Microsoft Edge | Version - 10.5.1 | Build - 14918.1</p>
+            </footer>
+        </div>
+    </div>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/shepherd.min.js"></script>
+<script>
+    const tour = new Shepherd.Tour({
+    useModalOverlay: true,
+    defaultStepOptions: {
+      classes: 'shadow-md bg-purple-dark',
+      scrollTo: true
+    }
+  });
+  tour.addStep({
+    id: 'login-submit',
+    arrow: false,
+    text: "<b>Bonjour!</b><br><b>Let's Try MyCloud</b><br><br>Hit the Login button to explore",
+    attachTo: {
+      element: '#login-submit',
+      on: 'bottom',
+      highlightClass: 'highlight-layer'
+    },
+    highlightClass: 'highlight-layer',
+    classes: 'example-step-extra-class',
+    modalOverlayOpeningPadding: 2
+
+  });
+  tour.start();
+</script>
+</body>
+</html>

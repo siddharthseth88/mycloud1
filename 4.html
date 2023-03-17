@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html  style="overflow: hidden; height:100vh">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyCloud</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/shepherd.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="main-dashboard min-h-100" style="overflow: hidden; height:100vh">
+    <div class="top-bar-main d-flex justify-content-between" style="padding: 0 25px ;background:#0077b5;color: #fff;">
+        <img src="assets/images/logo.PNG" style="padding: 2px 0;">
+        <div class="top-bar-cta d-flex align-items-center ps-2" style="border-left: 1px solid #fff;">
+            <img src="assets/images/top-bar-cta.PNG">
+        </div>
+    </div>
+    <div class="menu-bar mb-4" style="background-color:#dcdddd;padding: 0px 40px;color: #0077b5;">
+        <ul class="d-flex align-items-center" style="list-style: none;padding:0;margin:0;">
+            <li class="me-2">
+                <img src="assets/images/my-report.PNG" class="me-1">
+                <p class="m-0">My Reports</p>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">My Account</p>
+            </li>
+            <li class="me-2 third-step">
+                <img src="assets/images/request.PNG" class="me-1">
+                <img src="assets/images/request-active.PNG" class="me-1 d-none">
+                <p class="m-0">Request</p>
+                <div class="sub-menu" id="third-step">
+                    <a href="3.html" class="m-0 d-block">Request Service Catalog</a>
+                </div>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/help.PNG" class="me-1">
+                <p class="m-0">Help</p>
+            </li>
+        </ul>
+    </div>
+    <div class="container-type" style="padding: 0 15px;">
+        <p class="mb-0 fw-bold clr-primary">Service Catalogs</p>
+        <p class="mb-2">Browse the catalog services you need</p>
+        <div class="catalog-logo d-flex align-items-start justify-content-between">
+            <img src="assets/images/catalog-logo.jpg">
+            <img src="assets/images/catalog-button.jpg">
+        </div>
+        <table class="catalog-table">
+            <thead>
+                <tr>
+                    <th class="bg-primary-dark">
+                        <span class="table-first"><img src="assets/images/catalog-table-all.jpg">All Services</span>
+                    </th>
+                    <th>
+                        <span>Provisioning Endpoint*
+                            <div class="cutom-select active" id="first-step">
+                                <div class="select-tag">
+                                    <span class="select-name">--Select--</span>
+                                    <div class="select-option-list">
+                                        <div class="option">--Select--</div>
+                                        <div class="option option-main">DryiceMyCloudAzureRM</div>
+                                        <div class="option option-main">MyCldAzureRMBilling1</div>
+                                        <div class="option option-main">AzureAdvisory</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </span>
+                    </th>
+                    <th>
+                        <span>Region
+                            <select name="" id="" class="me-2">
+                                <option value="" selected>--Select--</option>
+                                <option value="">DryiceMyCloudAzureRM</option>
+                                <option value="">MyCldAzureRMBilling1</option>
+                                <option value="">AzureAdvisory</option>
+                            </select>
+                        </span>
+                    </th>
+                    <th>
+                        <span class="type-search">Search your Product here <span class="type-search-btn"><img src="assets/images/catalog-search.jpg"></span></span>
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="second-step">
+                            <span class="table-first">laas</span>
+                            <span class="table-first">Paas</span>
+                            <span class="table-first">Blueprint</span>
+                        </div>
+                    </td>
+                    <td class="no-data-td"colspan="3">
+                        <span class="no-data">No Data Available</span>
+                        <div class="catalog-card-list" style="display: none;">
+                            <div class="catalog-card">
+                                <div class="card-head mb-4">
+                                    <img src="assets/images/card-1.jpg">3 Tier Blueprint - Redhat Linux 7.8
+                                </div>
+                                <div class="card-content mb-4">
+                                    This helps you to provision 3 tiers of Linux Servers (App, Web and DB) In one single request.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="5.html" class="btn btn-primary"  id="last-step">Request</a>
+                                </div>
+                            </div>
+                            <div class="catalog-card">
+                                <div class="card-head mb-4">
+                                    <img src="assets/images/card-2.jpg">3 Tier Blueprint - Windows Server 2016 
+                                </div>
+                                <div class="card-content mb-4">
+                                    This helps you to provision 3 tiers of Linux Servers (App, Web and DB) In one single request.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-outline">Request</a>
+                                </div>
+                            </div>
+                            <div class="catalog-card">
+                                <div class="card-head mb-4">
+                                    <img src="assets/images/card-3.jpg">API Management Services
+                                </div>
+                                <div class="card-content mb-4">
+                                    This helps you to provision 3 tiers of Linux Servers (App, Web and DB) In one single request.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-outline">Request</a>
+                                </div>
+                            </div>
+                            <div class="catalog-card">
+                                <div class="card-head mb-4">
+                                    <img src="assets/images/card-4.jpg">Azure App Service
+                                </div>
+                                <div class="card-content mb-4">
+                                    This helps you to provision 3 tiers of Linux Servers (App, Web and DB) In one single request.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-outline">Request</a>
+                                </div>
+                            </div>
+                            <div class="catalog-card">
+                                <div class="card-head mb-4">
+                                    <img src="assets/images/card-5.jpg">Azure App Service Plan
+                                </div>
+                                <div class="card-content mb-4">
+                                    This helps you to provision 3 tiers of Linux Servers (App, Web and DB) In one single request.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-outline">Request</a>
+                                </div>
+                            </div>
+                            <div class="catalog-card">
+                                <div class="card-head mb-4">
+                                    <img src="assets/images/card-6.jpg">Azure Availability Set
+                                </div>
+                                <div class="card-content mb-4">
+                                    This helps you to provision 3 tiers of Linux Servers (App, Web and DB) In one single request.
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-outline">Request</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="copyright" style="background-color:#0077b5;padding: 10px 40px;color: #fff;">
+        <p class="mb-0">Copyright © 2013, 2022 HCL Technologies Limited</p>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/shepherd.min.js"></script>
+<script>
+    $('.select-tag .option').on('click', function(){
+        $(this).closest('.select-tag').find('.select-name').text($(this).text());
+    });
+    const tour = new Shepherd.Tour({
+    useModalOverlay: true,
+    defaultStepOptions: {
+      classes: 'shadow-md bg-purple-dark',
+      scrollTo: false
+    }
+  });
+    tour.addSteps([
+        {
+            arrow: false,
+            text: "Great! Now that you're on the service catalog page, pick a provisioning endpoint to populate configured catalogs.",
+            attachTo: {
+            element: '#first-step',
+            on: 'bottom',
+            },
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                $('#first-step .option-main').unbind('click');
+                    $('.no-data-td .no-data').show();
+                    $('.no-data-td .catalog-card-list').hide();
+                    $('#first-step').addClass('active');
+                    $('#first-step .option-main').on('click', function(){
+                        $('.cutom-select').removeClass('active');
+                        $('.no-data-td .no-data').hide();
+                        $('.no-data-td .catalog-card-list').show();
+                            tour.next();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 4
+        },
+        {
+            arrow: false,
+            text: "On this page you can see the catalog that has been populated, along with the option to filter by IaaS, PaaS, or blueprint.",
+            attachTo: {
+                on: 'bottom-start',
+            },
+            classes: 'second-step right-left',
+            buttons: [
+                {
+                text: 'Previous',
+                classes: 'previous',
+                action: tour.back
+                },
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "You can go ahead and request a catalog by selecting one",
+            attachTo: {
+                element: '#last-step',
+                on: 'left',
+            },
+            classes: 'third-step btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            modalOverlayOpeningPadding: 2
+        }
+    ]);
+    tour.start();
+</script>
+</body>
+</html>

@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html  style="overflow: hidden; height:100vh">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyCloud</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/shepherd.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="main-dashboard min-h-100" style="overflow: hidden; height:100vh">
+    <div class="top-bar-main d-flex justify-content-between" style="padding: 0 25px ;background:#0077b5;color: #fff;">
+        <img src="assets/images/logo.PNG" style="padding: 2px 0;">
+        <div class="top-bar-cta d-flex align-items-center ps-2" style="border-left: 1px solid #fff;">
+            <img src="assets/images/top-bar-cta.PNG">
+        </div>
+    </div>
+    <div class="menu-bar mb-4" style="background-color:#dcdddd;padding: 0px 40px;color: #0077b5;">
+        <ul class="d-flex align-items-center" style="list-style: none;padding:0;margin:0;">
+            <li class="me-2">
+                <img src="assets/images/my-report.PNG" class="me-1">
+                <p class="m-0">My Reports</p>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">My Account</p>
+            </li>
+            <li class="me-2 third-step">
+                <img src="assets/images/request.PNG" class="me-1">
+                <img src="assets/images/request-active.PNG" class="me-1 d-none">
+                <p class="m-0">Request</p>
+                <div class="sub-menu" id="third-step">
+                    <a href="3.html" class="m-0 d-block">Request Service Catalog</a>
+                </div>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/help.PNG" class="me-1">
+                <p class="m-0">Help</p>
+            </li>
+        </ul>
+    </div>
+    <div class="container-type" style="padding: 0 15px;">
+        <div class="page-title-p mb-2">
+            <p class="clr-primary mb-0"><span class="fw-bold">Service Catalog Name: </span>3 Tier Blueprint - Redhat Linux 7.8</p>
+        </div>
+        <div class="catalog-form-wrapper">
+            <div class="tab-wrapper">
+                <ul class="nav catalog-form-tab" role="tablist">
+                    <li class="">
+                    <a class=" active" data-bs-toggle="pill" href="#general" id="general-btn">General Configuration</a>
+                    </li>
+                    <li class="">
+                    <a class="" data-bs-toggle="pill" href="#web-server" id="tab-head-first">Web Server Configuration</a>
+                    </li>
+                    <li class="">
+                    <a class="" data-bs-toggle="pill" href="#app-server" id="tab-head-second">App Server Configuration</a>
+                    </li>
+                    <li class="">
+                    <a class="" data-bs-toggle="pill" href="#db-server" id="tab-head-third">DB Server Configuration</a>
+                    </li>
+                    <li class="">
+                    <a class="" data-bs-toggle="pill" href="#tags">Tags</a>
+                    </li>
+                </ul>
+                
+                <div class="tab-content">
+                    <div id="general" class="tab-pane active">
+                        <div class="catalog-form">
+                            <div class="form-head">
+                                <p class="mb-0">Item Details</p>
+                            </div>
+                            <div class="form-main">
+                                <div class="form-group">
+                                    <p class="label">Requested By <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <p class="type-input">Dryice Requester</p>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Requested For<span class="clr-danger">*</span> <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <p class="type-input">Dryice Requester</p>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Email Address<span class="clr-danger">*</span> <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <p class="type-input">DryiceRequester@hcl.com</p>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label" id="first-step">Application Name<span class="clr-danger">*</span> <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <div class="cutom-select placement-top max-heigth" id="thirdd-step">
+                                        <div class="select-tag" id="second-step">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Ansible</div>
+                                                <div class="option option-main">Applikon</div>
+                                                <div class="option option-main">Consul</div>
+                                                <div class="option option-main">Control-M</div>
+                                                <div class="option option-main">CountryoutsideEU</div>
+                                                <div class="option option-main">Docker</div>
+                                                <div class="option option-main">Fieldservice</div>
+                                                <div class="option option-main">GitLab</div>
+                                                <div class="option option-main">HeiDl</div>
+                                                <div class="option option-main">HTestConfidential</div>
+                                                <div class="option option-main">HtestFCS</div>
+                                                <div class="option option-main">HTestInternal</div>
+                                                <div class="option option-main">HTestOpen</div>
+                                                <div class="option option-main">HTestPDP</div>
+                                                <div class="option option-main">HTestStrictlyConfidential</div>
+                                                <div class="option option-main">IMac</div>
+                                                <div class="option option-main">It-Helpdesk</div>
+                                                <div class="option option-main">Magallan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Business Unit<span class="clr-danger">*</span> <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <p class="type-input"></p>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Assignment Code/Cost Center<span class="clr-danger">*</span> <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <p class="type-input"></p>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Server Enviroment<span class="clr-danger">*</span> <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <div class="cutom-select" id="fifth-step">
+                                        <div class="select-tag" id="fourth-step">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Development</div>
+                                                <div class="option option-main">Production</div>
+                                                <div class="option option-main">QA</div>
+                                                <div class="option option-main">Test</div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Lease Period<span class="clr-danger">*</span> <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <div class="cutom-select" id="sixth-step">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Day(s)</div>
+                                                <div class="option option-main">Week(s)</div>
+                                                <div class="option option-main">Month(s)</div>
+                                                <div class="option option-main">Year(s)</div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Lease Period Value<span class="clr-danger">*</span> <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <p class="type-input"></p>
+                                </div>
+                                <div class="form-group" id="seventh-step">
+                                    <p class="label">Service Plan<span class="clr-danger">*</span> <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <div class="cutom-select" id="seventh-step-inner">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Bronze</div>
+                                                <div class="option option-main">Silver</div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Additional Owner Details <img src="assets/images/info.png" data-bs-toggle="tooltip" data-bs-placement="top" title="Select Application Name the Services required For. Applications name will be listed down based on selected hosting location and data localisation regulations. For Example if the Hosting location is Europe, only applications can be hosted in Europe will be listed."></p>
+                                    <p class="type-input"></p>
+                                </div>
+                                <div class="form-group add-btn">
+                                    <p class="type-submit">Add Owner</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="web-server" class="tab-pane fade">
+                        <div class="catalog-form">
+                            <div class="form-head">
+                                <p class="mb-0">Item Details</p>
+                            </div>
+                            <div class="form-main">
+                                <div class="form-group">
+                                    <p class="label">Instance Family<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-7" id="instance-family-main">
+                                        <div class="select-tag" id="instance-family">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Compute Optimized</div>
+                                                <div class="option option-main">General Purpose</div>
+                                                <div class="option option-main">GPU</div>
+                                                <div class="option option-main">High Performance compute</div>
+                                                <div class="option option-main">Memory Optimized</div>
+                                                <div class="option option-main">Storage Optimized</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Instance Size<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select max-heigth" id="instance-size-main">
+                                        <div class="select-tag" id="instance-size">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">A2-Cores: 2, Memory: 3.5</div>
+                                                <div class="option option-main">A3-Cores: 4, Memory: 7</div>
+                                                <div class="option option-main">A4 - Cores: 8, Memory: 14</div>
+                                                <div class="option option-main">A6-Cores: 4, Memory: 28</div>
+                                                <div class="option option-main">D14 - Cores: 16, Memory: 112</div>
+                                                <div class="option option-main">A1_v2-Cores: 1, Memory: 2</div>
+                                                <div class="option option-main">A2m_v2-Cores: 2, Memory: 16</div>
+                                                <div class="option option-main">A2_v2 - Cores: 2, Memory: 4</div>
+                                                <div class="option option-main">A4m_v2 - Cores: 4, Memory: 32</div>
+                                                <div class="option option-main">A4_v2-Cores: 4, Memory: 8</div>
+                                                <div class="option option-main">A8m_v2 - Cores: 8, Memory: 64</div>
+                                                <div class="option option-main">DS14 - Cores: 16, Memory: 112</div>
+                                                <div class="option option-main">D1_v2 - Cores: 1, Memory: 3.5</div>
+                                                <div class="option option-main">D2 v2 - Cores: 2, Memory: 7</div>
+                                                <div class="option option-main">D3_v2 - Cores: 4, Memory: 14</div>
+                                                <div class="option option-main">D4_v2 - Cores: 8, Memory: 28</div>
+                                                <div class="option option-main">D5_v2 - Cores: 16, Memory: 56</div>
+                                                <div class="option option-main">D11_v2 - Cores: 2, Memory: 14</div>
+                                                <div class="option option-main">D12_v2 - Cores: 4, Memory: 28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Security Zone<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Development</div>
+                                                <div class="option option-main">Production</div>
+                                                <div class="option option-main">QA</div>
+                                                <div class="option option-main">Test</div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Instance Storage Type<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select max-heigth">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Ansible</div>
+                                                <div class="option option-main">Applikon</div>
+                                                <div class="option option-main">Consul</div>
+                                                <div class="option option-main">Control-M</div>
+                                                <div class="option option-main">CountryoutsideEU</div>
+                                                <div class="option option-main">Docker</div>
+                                                <div class="option option-main">Fieldservice</div>
+                                                <div class="option option-main">GitLab</div>
+                                                <div class="option option-main">HeiDl</div>
+                                                <div class="option option-main">HTestConfidential</div>
+                                                <div class="option option-main">HtestFCS</div>
+                                                <div class="option option-main">HTestInternal</div>
+                                                <div class="option option-main">HTestOpen</div>
+                                                <div class="option option-main">HTestPDP</div>
+                                                <div class="option option-main">HTestStrictlyConfidential</div>
+                                                <div class="option option-main">IMac</div>
+                                                <div class="option option-main">It-Helpdesk</div>
+                                                <div class="option option-main">Magallan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Maintenance Window<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Development</div>
+                                                <div class="option option-main">Production</div>
+                                                <div class="option option-main">QA</div>
+                                                <div class="option option-main">Test</div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Resource Group<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-2" id="resource-group">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">MyCloudRG</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Virtual network<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-2" id="virtual-network">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">MyCloudRG-vnet</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Subnets<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-2" id="subnets">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">MyCloud-Subnet-Web</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Drive Letter/File System Name for Additional Drive <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Bronze</div>
+                                                <div class="option option-main">Silver</div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Drive Size(GB) for Additional Drive <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Bronze</div>
+                                                <div class="option option-main">Silver</div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group add-btn">
+                                    <p class="type-submit">Add Drives</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="app-server" class="tab-pane fade">
+                        <div class="catalog-form">
+                            <div class="form-head">
+                                <p class="mb-0">Item Details</p>
+                            </div>
+                            <div class="form-main">
+                                <div class="form-group">
+                                    <p class="label">Instance Family<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-7" id="instance-family-main-app">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Compute Optimized</div>
+                                                <div class="option option-main">General Purpose</div>
+                                                <div class="option option-main">GPU</div>
+                                                <div class="option option-main">High Performance compute</div>
+                                                <div class="option option-main">Memory Optimized</div>
+                                                <div class="option option-main">Storage Optimized</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Instance Size<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select max-heigth" id="instance-size-main-app">
+                                        <div class="select-tag" id="instance-size-app">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">A2-Cores: 2, Memory: 3.5</div>
+                                                <div class="option option-main">A3-Cores: 4, Memory: 7</div>
+                                                <div class="option option-main">A4 - Cores: 8, Memory: 14</div>
+                                                <div class="option option-main">A6-Cores: 4, Memory: 28</div>
+                                                <div class="option option-main">D14 - Cores: 16, Memory: 112</div>
+                                                <div class="option option-main">A1_v2-Cores: 1, Memory: 2</div>
+                                                <div class="option option-main">A2m_v2-Cores: 2, Memory: 16</div>
+                                                <div class="option option-main">A2_v2 - Cores: 2, Memory: 4</div>
+                                                <div class="option option-main">A4m_v2 - Cores: 4, Memory: 32</div>
+                                                <div class="option option-main">A4_v2-Cores: 4, Memory: 8</div>
+                                                <div class="option option-main">A8m_v2 - Cores: 8, Memory: 64</div>
+                                                <div class="option option-main">DS14 - Cores: 16, Memory: 112</div>
+                                                <div class="option option-main">D1_v2 - Cores: 1, Memory: 3.5</div>
+                                                <div class="option option-main">D2 v2 - Cores: 2, Memory: 7</div>
+                                                <div class="option option-main">D3_v2 - Cores: 4, Memory: 14</div>
+                                                <div class="option option-main">D4_v2 - Cores: 8, Memory: 28</div>
+                                                <div class="option option-main">D5_v2 - Cores: 16, Memory: 56</div>
+                                                <div class="option option-main">D11_v2 - Cores: 2, Memory: 14</div>
+                                                <div class="option option-main">D12_v2 - Cores: 4, Memory: 28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Security Zone<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Development</div>
+                                                <div class="option option-main">Production</div>
+                                                <div class="option option-main">QA</div>
+                                                <div class="option option-main">Test</div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Instance Storage Type<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select max-heigth">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Ansible</div>
+                                                <div class="option option-main">Applikon</div>
+                                                <div class="option option-main">Consul</div>
+                                                <div class="option option-main">Control-M</div>
+                                                <div class="option option-main">CountryoutsideEU</div>
+                                                <div class="option option-main">Docker</div>
+                                                <div class="option option-main">Fieldservice</div>
+                                                <div class="option option-main">GitLab</div>
+                                                <div class="option option-main">HeiDl</div>
+                                                <div class="option option-main">HTestConfidential</div>
+                                                <div class="option option-main">HtestFCS</div>
+                                                <div class="option option-main">HTestInternal</div>
+                                                <div class="option option-main">HTestOpen</div>
+                                                <div class="option option-main">HTestPDP</div>
+                                                <div class="option option-main">HTestStrictlyConfidential</div>
+                                                <div class="option option-main">IMac</div>
+                                                <div class="option option-main">It-Helpdesk</div>
+                                                <div class="option option-main">Magallan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Maintenance Window<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Development</div>
+                                                <div class="option option-main">Production</div>
+                                                <div class="option option-main">QA</div>
+                                                <div class="option option-main">Test</div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Resource Group<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-2">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">MyCloudRG</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Virtual network<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-2">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">MyCloudRG-vnet</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Subnets<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-2">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">MyCloud-Subnet-Web</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Drive Letter </p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Bronze</div>
+                                                <div class="option option-main">Silver</div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Drive Size </p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Bronze</div>
+                                                <div class="option option-main">Silver</div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group add-btn">
+                                    <p class="type-submit">Add Drive</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="db-server" class="tab-pane fade">
+                        <div class="catalog-form">
+                            <div class="form-head">
+                                <p class="mb-0">Item Details</p>
+                            </div>
+                            <div class="form-main">
+                                <div class="form-group">
+                                    <p class="label">Instance Family<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-7" id="instance-family-main-db">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Compute Optimized</div>
+                                                <div class="option option-main">General Purpose</div>
+                                                <div class="option option-main">GPU</div>
+                                                <div class="option option-main">High Performance compute</div>
+                                                <div class="option option-main">Memory Optimized</div>
+                                                <div class="option option-main">Storage Optimized</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Instance Size<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select max-heigth" id="instance-size-main-db">
+                                        <div class="select-tag" id="instance-size-app">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">A2-Cores: 2, Memory: 3.5</div>
+                                                <div class="option option-main">A3-Cores: 4, Memory: 7</div>
+                                                <div class="option option-main">A4 - Cores: 8, Memory: 14</div>
+                                                <div class="option option-main">A6-Cores: 4, Memory: 28</div>
+                                                <div class="option option-main">D14 - Cores: 16, Memory: 112</div>
+                                                <div class="option option-main">A1_v2-Cores: 1, Memory: 2</div>
+                                                <div class="option option-main">A2m_v2-Cores: 2, Memory: 16</div>
+                                                <div class="option option-main">A2_v2 - Cores: 2, Memory: 4</div>
+                                                <div class="option option-main">A4m_v2 - Cores: 4, Memory: 32</div>
+                                                <div class="option option-main">A4_v2-Cores: 4, Memory: 8</div>
+                                                <div class="option option-main">A8m_v2 - Cores: 8, Memory: 64</div>
+                                                <div class="option option-main">DS14 - Cores: 16, Memory: 112</div>
+                                                <div class="option option-main">D1_v2 - Cores: 1, Memory: 3.5</div>
+                                                <div class="option option-main">D2 v2 - Cores: 2, Memory: 7</div>
+                                                <div class="option option-main">D3_v2 - Cores: 4, Memory: 14</div>
+                                                <div class="option option-main">D4_v2 - Cores: 8, Memory: 28</div>
+                                                <div class="option option-main">D5_v2 - Cores: 16, Memory: 56</div>
+                                                <div class="option option-main">D11_v2 - Cores: 2, Memory: 14</div>
+                                                <div class="option option-main">D12_v2 - Cores: 4, Memory: 28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Security Zone<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Development</div>
+                                                <div class="option option-main">Production</div>
+                                                <div class="option option-main">QA</div>
+                                                <div class="option option-main">Test</div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Instance Storage Type<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select max-heigth">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Ansible</div>
+                                                <div class="option option-main">Applikon</div>
+                                                <div class="option option-main">Consul</div>
+                                                <div class="option option-main">Control-M</div>
+                                                <div class="option option-main">CountryoutsideEU</div>
+                                                <div class="option option-main">Docker</div>
+                                                <div class="option option-main">Fieldservice</div>
+                                                <div class="option option-main">GitLab</div>
+                                                <div class="option option-main">HeiDl</div>
+                                                <div class="option option-main">HTestConfidential</div>
+                                                <div class="option option-main">HtestFCS</div>
+                                                <div class="option option-main">HTestInternal</div>
+                                                <div class="option option-main">HTestOpen</div>
+                                                <div class="option option-main">HTestPDP</div>
+                                                <div class="option option-main">HTestStrictlyConfidential</div>
+                                                <div class="option option-main">IMac</div>
+                                                <div class="option option-main">It-Helpdesk</div>
+                                                <div class="option option-main">Magallan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Maintenance Window<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Development</div>
+                                                <div class="option option-main">Production</div>
+                                                <div class="option option-main">QA</div>
+                                                <div class="option option-main">Test</div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Resource Group<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-2" id="resource-group-db">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">MyCloudRG</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Virtual network<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-2" id="virtual-network-db">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">MyCloudRG-vnet</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Subnets<span class="clr-danger">*</span></p>
+                                    <div class="cutom-select option-2" id="subnets-db">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">MyCloud-Subnet-DB</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Drive Letter/File System Name for Additional Drive <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">Bronze</div>
+                                                <div class="option option-main">Silver</div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Drive Size(GB) for Additional Drive <img src="assets/images/info.png"></p>
+                                    <div class="cutom-select placement-top option-9"  id="drive-size-db">
+                                        <div class="select-tag">
+                                            <span class="select-name">--Select--</span>
+                                            <div class="select-option-list">
+                                                <div class="option">--Select--</div>
+                                                <div class="option option-main">32</div>
+                                                <div class="option option-main">64</div> 
+                                                <div class="option option-main">128</div> 
+                                                <div class="option option-main">256</div> 
+                                                <div class="option option-main">512</div> 
+                                                <div class="option option-main">1024</div> 
+                                                <div class="option option-main">2048</div> 
+                                                <div class="option option-main">4096</div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group add-btn">
+                                    <p class="type-submit">Add Drive</p>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Drive size in GB (Applicable for DB Catalogues)<span class="clr-danger">*</span> <img src="assets/images/info.png"></p>
+                                    <p class="type-input">10</p>
+                                </div>
+                                <div class="form-group">
+                                    <p class="label">Add-on Storage Configuration <img src="assets/images/info.png"></p>
+                                    <p class="type-input height-textarea"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tags" class="tab-pane fade"></div>
+                </div>
+            </div>
+            <div class="cta-wrapper text-center">
+                <a href="#" class="btn btn-grey-dark">Cancel</a>
+                <a href="#" class="btn btn-primary-blue" id="main-submit">Submit</a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright" style="background-color:#0077b5;padding: 10px 40px;color: #fff;">
+        <p class="mb-0">Copyright © 2013, 2022 HCL Technologies Limited</p>
+    </div>
+    <div class="modal" id="afterSubmit">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-logo">
+                    <span>MyCloud</span>
+                </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal">
+                <span class="close-line line-1"></span>
+                <span class="close-line line-2"></span>
+              </button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+              <div class="modal-table">
+                <h5>Request Detail</h5>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Request Date(mm/dd/yyyy)</td>
+                            <td>09/30/2022</td>
+                            <td>Catalog Name</td>
+                            <td class="clr-primary-blue">3 Tier Blueprint - Redhat Linux 7.8</td>
+                        </tr>
+                        <tr>
+                            <td>Region Name</td>
+                            <td>eastus</td>
+                            <td>Provisioning Endpoint</td>
+                            <td>DryiceMyCloudAzureRM</td>
+                        </tr>
+                        <tr>
+                            <td>Requester Name</td>
+                            <td>Dryice Requester</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+              <div class="modal-table">
+                <h5>Item: 1</h5>
+                <div class="tab-table">
+                    <ul class="nav catalog-form-tab" role="tablist">
+                        <li>
+                        <a class="active">General Configuration</a>
+                        </li>
+                        <li>
+                        <a>Web Server Configuration</a>
+                        </li>
+                        <li>
+                        <a>App Server Configuration</a>
+                        </li>
+                        <li>
+                        <a>DB Server Configuration</a>
+                        </li>
+                        <li>
+                        <a>Tags</a>
+                        </li>
+                    </ul>
+                    <div class="table-wrapper">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Requested By</td>
+                                    <td>Dryice Requester</td>
+                                    <td>Requested For</td>
+                                    <td>DryiceMyCloudAzureRM</td>
+                                </tr>
+                                <tr>
+                                    <td>Email Address</td>
+                                    <td>DryiceRequester@hcl.com</td>
+                                    <td>Application Name</td>
+                                    <td>It-Helpdesk</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Unit</td>
+                                    <td>IT Operations</td>
+                                    <td>Assignment Code/Cost Center</td>
+                                    <td>141500/OIOM</td>
+                                </tr>
+                                <tr>
+                                    <td>Server Environment</td>
+                                    <td>Development</td>
+                                    <td>Lease Period</td>
+                                    <td>Day(s)</td>
+                                </tr>
+                                <tr>
+                                    <td>Service Plan</td>
+                                    <td>Bronze</td>
+                                    <td>Lease Period Value</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>Additional Owner Details</td>
+                                    <td></td>
+                                    <td>Additional Owner Details</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+              
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <a href="6.html" class="btn btn-grey-dark" id="modal-btn">Confirm</a>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+    <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/shepherd.min.js"></script>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+    $('.select-tag .option').on('click', function(){
+        $(this).closest('.select-tag').find('.select-name').text($(this).text());
+    });
+    const tour = new Shepherd.Tour({
+        useModalOverlay: true,
+        defaultStepOptions: {
+        classes: 'shadow-md bg-purple-dark',
+        scrollTo: false
+        }
+    });
+    tour.addSteps([
+        {
+            arrow: false,
+            text: "Let’s fill out the form and hover your mouse over the info icon to see a description of the field.",
+            attachTo: {
+            element: '#first-step',
+            on: 'bottom',
+            },
+            classes: 'first-step',
+            buttons: [
+                {
+                text: 'Previous',
+                classes: 'previous',
+                action: function(){window.location.href = '4.html';}
+                },
+                {
+                text: 'Next',
+                action: function(){$('body').removeClass('tooltip-high');tour.next();}
+                }
+            ],
+            when: {
+            show: () => {
+                    $('body').addClass('tooltip-high');
+                }
+            }, 
+            highlightClass: 'highlight-layer', 
+            modalOverlayOpeningPadding: 4
+        },
+        {
+            arrow: false,
+            text: "To select an application, click the dropdown menu",
+            attachTo: {
+                element: '#thirdd-step',
+                on: 'right',
+            },
+            classes: 'thirdd-step btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#thirdd-step').on('click', function(){
+                        $('.shepherd-element.thirdd-step.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "To select an application, click the dropdown menu item",
+            attachTo: {
+                element: '#thirdd-step',
+                on: 'right',
+            },
+            classes: 'thirddd-step btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                $('.shepherd-element.thirdd-step').remove();
+                $('#thirdd-step').addClass('active');
+                    $('#thirdd-step .option-main').on('click', function(){
+                        if($(this).hasClass('option-main')){
+                            $('#thirdd-step').removeClass('active');
+                            $('.shepherd-element.thirddd-step.btn-none button').click();
+                        }
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Select an environment by clicking the dropdown.",
+            attachTo: {
+                element: '#fifth-step',
+                on: 'right',
+            },
+            classes: 'fourth-step btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#fifth-step').on('click', function(){
+                        $('.shepherd-element.fourth-step.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Select an environment by clicking the dropdown item",
+            attachTo: {
+                element: '#fifth-step',
+                on: 'right',
+            },
+            classes: 'fifth-step btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                $('.shepherd-element.fourth-step').remove();
+                $('#fifth-step').addClass('active');
+                    $('#fifth-step .option-main').on('click', function(e){
+                        if($(this).hasClass('option-main')){
+                            $('#fifth-step').removeClass('active');
+                            $('.shepherd-element.fifth-step.btn-none button').click();
+                        }
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "By clicking the dropdown, you can choose days, weeks, months, or years as the lease period.",
+            attachTo: {
+                element: '#sixth-step',
+                on: 'right',
+            },
+            classes: 'sixth-step btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#sixth-step').addClass('active');
+                    $('#sixth-step .option-main').on('click', function(){
+                        $('#sixth-step').removeClass('active');
+                        $('.shepherd-element.sixth-step.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Choose a service plan that suits your needs. Each of these service plans can be completely customized by your admin.",
+            attachTo: {
+                element: '#seventh-step',
+                on: 'right',
+            },
+            classes: 'seventh-step btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#seventh-step , #seventh-step-inner').addClass('active');
+                    $('#seventh-step #seventh-step-inner .option-main').on('click', function(){
+                        $('#seventh-step , #seventh-step-inner').removeClass('active');
+                        $('.shepherd-element.seventh-step.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Let's set up the web server",
+            attachTo: {
+                element: '#tab-head-first',
+                on: 'top',
+            },
+            classes: 'tab-head-first btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#tab-head-first').on('click', function(){
+                        setTimeout(function(){tour.next()},200);
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "To select an Instance family, click the dropdown menu",
+            attachTo: {
+                element: '#instance-family-main',
+                on: 'right',
+            },
+            classes: 'instance-family btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#instance-family-main').on('click', function(){
+                        $('.shepherd-element.instance-family.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "To select an Instance family, click the dropdown menu item",
+            attachTo: {
+                element: '#instance-family-main',
+                on: 'right',
+            },
+            classes: 'instance-family-main btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                        $('.shepherd-element.instance-family').remove();
+                        $('#instance-family-main').addClass('active');
+                        $('#instance-family-main .option-main').on('click', function(e){
+                            if($(this).hasClass('option-main')){
+                                $('#instance-family-main').removeClass('active');
+                                $('.shepherd-element.instance-family-main.btn-none button').click();
+                            }
+                        });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "For your instance, select the desired t-shirt size.",
+            attachTo: {
+                element: '#instance-size-main',
+                on: 'right',
+            },
+            classes: 'instance-size-main btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#instance-size-main ').addClass('active');
+                    $('#instance-size-main .option-main').on('click', function(){
+                        $('#instance-size-main').removeClass('active');
+                        $('.shepherd-element.instance-size-main.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Click on the dropdown menu to select the resource group",
+            attachTo: {
+                element: '#resource-group',
+                on: 'right',
+            },
+            classes: 'resource-group btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#resource-group').addClass('active');
+                    $('#resource-group .option-main').on('click', function(){
+                        $('#resource-group').removeClass('active');
+                        $('.shepherd-element.resource-group.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Click on the dropdown menu to select the VirtualNetwork",
+            attachTo: {
+                element: '#virtual-network',
+                on: 'right',
+            },
+            classes: 'virtual-network btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#virtual-network').addClass('active');
+                    $('#virtual-network .option-main').on('click', function(){
+                        $('#virtual-network').removeClass('active');
+                        $('.shepherd-element.virtual-network.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Click on the dropdown menu to select the subnet",
+            attachTo: {
+                element: '#subnets',
+                on: 'right',
+            },
+            classes: 'subnets btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#subnets').addClass('active');
+                    $('#subnets .option-main').on('click', function(){
+                        $('#subnets').removeClass('active');
+                        $('.shepherd-element.subnets.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Let's set up the App server",
+            attachTo: {
+                element: '#tab-head-second',
+                on: 'top',
+            },
+            classes: 'tab-head-second btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#tab-head-second').on('click', function(){
+                        setTimeout(function(){
+                        tour.next();
+                        }, 250)
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "To select an Instance family, click the dropdown menu",
+            attachTo: {
+                element: '#instance-family-main-app',
+                on: 'right',
+            },
+            classes: 'instance-family-main-app btn-none',
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#instance-family-main-app ').addClass('active');
+                    $('#instance-family-main-app .option-main').on('click', function(e){
+                        $('#instance-family-main-app').removeClass('active');
+                        tour.next();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "For your instance, select the desired t-shirt size.",
+            attachTo: {
+                element: '#instance-size-main-app',
+                on: 'right',
+            },
+            classes: 'instance-size-main-app btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#instance-size-main-app ').addClass('active');
+                    $('#instance-size-main-app .option-main').on('click', function(){
+                        $('#instance-size-main-app').removeClass('active');
+                        $('.shepherd-element.instance-size-main-app.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Let's set up the DB server now",
+            attachTo: {
+                element: '#tab-head-third',
+                on: 'top',
+            },
+            classes: 'tab-head-third btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#tab-head-third').on('click', function(){
+                        setTimeout(() => {
+                            tour.next();
+                        }, 250);
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "To select an Instance family, click the dropdown menu",
+            attachTo: {
+                element: '#instance-family-main-db',
+                on: 'right',
+            },
+            classes: 'instance-family-main-db btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#instance-family-main-db').addClass('active');
+                    $('#instance-family-main-db .option-main').on('click', function(){
+                        $('#instance-family-main-db').removeClass('active');
+                        $('.shepherd-element.instance-family-main-db.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "For your instance, select the desired t-shirt size.",
+            attachTo: {
+                element: '#instance-size-main-db',
+                on: 'right',
+            },
+            classes: 'instance-size-main-db btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#instance-size-main-db').addClass('active');
+                    $('#instance-size-main-db .option-main').on('click', function(){
+                        $('#instance-size-main-db').removeClass('active');
+                        $('.shepherd-element.instance-size-main-db.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Click on the dropdown menu to select the resource group",
+            attachTo: {
+                element: '#resource-group-db',
+                on: 'right',
+            },
+            classes: 'resource-group-db btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#resource-group-db').addClass('active');
+                    $('#resource-group-db .option-main').on('click', function(){
+                        $('#resource-group-db').removeClass('active');
+                        $('.shepherd-element.resource-group-db.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Click on the dropdown menu to select the VirtualNetwork",
+            attachTo: {
+                element: '#virtual-network-db',
+                on: 'right',
+            },
+            classes: 'virtual-network-db btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#virtual-network-db').addClass('active');
+                    $('#virtual-network-db .option-main').on('click', function(){
+                        $('#virtual-network-db').removeClass('active');
+                        $('.shepherd-element.virtual-network-db.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Click on the dropdown menu to select the subnet",
+            attachTo: {
+                element: '#subnets-db',
+                on: 'right',
+            },
+            classes: 'subnets-db btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#subnets-db').addClass('active');
+                    $('#subnets-db .option-main').on('click', function(){
+                        $('#subnets-db').removeClass('active');
+                        $('.shepherd-element.subnets-db.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Click on the dropdown menu to select the DB Size",
+            attachTo: {
+                element: '#drive-size-db',
+                on: 'right',
+            },
+            classes: 'drive-size-db btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#drive-size-db').addClass('active');
+                    $('#drive-size-db .option-main').on('click', function(){
+                        $('#drive-size-db').removeClass('active');
+                        $('.shepherd-element.drive-size-db.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "Let's move forward now that you've filled out the form by clicking \"Submit\".",
+            attachTo: {
+                element: '#main-submit',
+                on: 'right',
+            },
+            classes: 'main-submit btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    $('#main-submit').on('click', function(){
+                        $('.tab-content > .tab-pane').removeClass('active show');
+                        $('.tab-content > .tab-pane:first-child').addClass('active show');
+                        $('.shepherd-element.main-submit.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        },
+        {
+            arrow: false,
+            text: "When you're done reviewing your form, hit Confirm provision",
+            attachTo: {
+                element: '#modal-btn',
+                on: 'right',
+            },
+            classes: 'modal-btn btn-none',
+            buttons: [
+                {
+                text: 'Next',
+                action: tour.next
+                }
+            ], 
+            highlightClass: 'highlight-layer', 
+            when: {
+            show: () => {
+                    new bootstrap.Modal($('#afterSubmit')).show();
+                    $('#modal-btn').on('click', function(){
+                        $('.shepherd-element.modal-btn.btn-none button').click();
+                    });
+                }
+            },
+            modalOverlayOpeningPadding: 2
+        }
+        
+    ]);
+    tour.start();
+</script>
+</body>
+</html>

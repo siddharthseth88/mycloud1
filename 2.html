@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html  style="overflow: hidden; height:100vh">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyCloud</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/shepherd.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="main-dashboard" style="overflow: hidden; height:100vh">
+    <div class="top-bar-main d-flex justify-content-between" style="padding: 0 25px ;background:#0077b5;color: #fff;">
+        <img src="assets/images/logo.PNG" style="padding: 2px 0;">
+        <div class="top-bar-cta d-flex align-items-center ps-2" style="border-left: 1px solid #fff;">
+            <img src="assets/images/top-bar-cta.PNG">
+        </div>
+    </div>
+    <div class="menu-bar" style="background-color:#dcdddd;padding: 0px 40px;color: #0077b5;">
+        <ul class="d-flex align-items-center" style="list-style: none;padding:0;margin:0;">
+            <li class="me-2">
+                <img src="assets/images/my-report.PNG" class="me-1">
+                <p class="m-0">My Reports</p>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">My Account</p>
+            </li>
+            <li class="me-2 third-step">
+                <img src="assets/images/request.PNG" class="me-1">
+                <img src="assets/images/request-active.PNG" class="me-1 d-none">
+                <p class="m-0">Request</p>
+                <div class="sub-menu" id="third-step">
+                    <a href="3.html" class="m-0 d-block">Request Service Catalog</a>
+                </div>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/help.PNG" class="me-1">
+                <p class="m-0">Help</p>
+            </li>
+        </ul>
+    </div>
+    <div class="container-type" style="padding: 0 25px;">
+        <div class="main-filter pt-3 pb-4">
+            <div class="d-flex justify-content-between align-items-end">
+                <h5 class="mb-3">MyCloud Dashboard</h5>
+                <div class="d-flex align-items-center">
+                    <p class="me-3 mb-0" style="color: #0077b5;">Date Format:(mm/dd/yyy)</p>
+                    <p class="mb-0" style="padding: 12px 20px;background-color:#0077b5;color:#fff;">Save Layout</p>
+                </div>
+            </div>
+            <div class="filter-wrapper p-2 d-flex align-items-center justify-content-between" style="background-color: #d9e8f9;border:1px solid #ececec">
+                <div class="d-flex align-items-center" >
+                    <img src="assets/images/filter.PNG" class="me-1">
+                    <p class="me-5 mb-0 fw-500" style="color:#00385d;">Dashboard Filters { <span style="color: #117ec2;font-size:14px;font-weight:bold">From Date: </span>01/01/2021&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #117ec2;font-size:14px;font-weight:bold">To Date: 03/31/2021</span>}</p>
+                </div>
+                <img src="assets/images/add-new.PNG">
+            </div>
+        </div>
+        <div class="main-graph" style="background-color: #ececec;padding:12px">
+            <div class="row mb-4">
+                <div class="col-6">
+                    <div class="card-menu">
+                        <div class="card-top d-flex justify-content-between align-items-center">
+                            <p class="m-0">Platform Wise Request</p>
+                            <img src="assets/images/graph-option.PNG">
+                        </div>
+                        <div class="card-main">
+                            <img src="assets/images/platform-wise.PNG">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card-menu">
+                        <div class="card-top d-flex justify-content-between align-items-center">
+                            <p class="m-0">OS Wise Provisioning Request</p>
+                            <img src="assets/images/graph-option.PNG">
+                        </div>
+                        <div class="card-main">
+                            <img src="assets/images/wise-provisioning.PNG" style="margin-top: -8px; ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card-menu">
+                        <div class="card-top d-flex justify-content-between align-items-center">
+                            <p class="m-0">GCP Service Wise Billing</p>
+                            <img src="assets/images/graph-option.PNG">
+                        </div>
+                        <div class="card-main">
+                            <img src="assets/images/platform-wise.PNG">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main-first"></div>
+    <div id="main-second"></div>
+    <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/shepherd.min.js"></script>
+<script>
+    const tour = new Shepherd.Tour({
+    useModalOverlay: true,
+    defaultStepOptions: {
+      classes: 'shadow-md bg-purple-dark',
+      scrollTo: false
+    }
+  });
+  var thirdStep = 'right';
+
+  if($(window).width() < 991){
+    thirdStep = 'bottom';
+  }
+  tour.addSteps([
+    {
+        arrow: false,
+        text: "Welcome to MyCloud! Keeping your cloud services organized is what we do :)",
+        attachTo: {
+        on: 'top',
+        },
+        classes: 'example-step-extra-class',
+        buttons: [ 
+            {
+            text: 'Previous',
+            classes: 'previous',
+            action: function(){window.location.href = '1.html';}
+            },
+            {
+            text: 'Next',
+            action: tour.next
+            }
+        ],
+        modalOverlayOpeningPadding: 0
+    },
+    {
+        arrow: false,
+        text: "Here's your MyCloud dashboard. A variety of widgets for performance and billing reports are available to provide you with an overview of some of the most useful information",
+        attachTo: {
+        on: 'top',
+        },
+        classes: 'tour',
+        buttons: [
+            {
+            text: 'Previous',
+            classes: 'previous',
+            action: tour.back
+            },
+            {
+            text: 'Next',
+            action: tour.next
+            }
+        ], 
+        modalOverlayOpeningPadding: 2
+    },
+    {
+        arrow: false,
+        text: "Let's begin by navigating to the Request menu",
+        attachTo: {
+            element: '#third-step',
+            on: thirdStep,
+        },
+        when: {
+        show: () => {
+                $('.third-step').addClass('active');
+            }
+        },
+        highlightClass: 'highlight-layer',
+        classes: 'example-step-extra-class',
+        modalOverlayOpeningPadding: 3
+    }
+  ]);
+tour.start();
+</script>
+</body>
+</html>

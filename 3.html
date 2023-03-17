@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html  style="overflow: hidden; height:100vh">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyCloud</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/shepherd.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="main-dashboard min-h-100" style="overflow: hidden; height:100vh">
+    <div class="top-bar-main d-flex justify-content-between" style="padding: 0 25px ;background:#0077b5;color: #fff;">
+        <img src="assets/images/logo.PNG" style="padding: 2px 0;">
+        <div class="top-bar-cta d-flex align-items-center ps-2" style="border-left: 1px solid #fff;">
+            <img src="assets/images/top-bar-cta.PNG">
+        </div>
+    </div>
+    <div class="menu-bar" style="background-color:#dcdddd;padding: 0px 40px;color: #0077b5;">
+        <ul class="d-flex align-items-center" style="list-style: none;padding:0;margin:0;">
+            <li class="me-2">
+                <img src="assets/images/my-report.PNG" class="me-1">
+                <p class="m-0">My Reports</p>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/my-account.PNG" class="me-1">
+                <p class="m-0">My Account</p>
+            </li>
+            <li class="me-2 third-step">
+                <img src="assets/images/request.PNG" class="me-1">
+                <img src="assets/images/request-active.PNG" class="me-1 d-none">
+                <p class="m-0">Request</p>
+                <div class="sub-menu" id="third-step">
+                    <a href="3.html" class="m-0 d-block">Request Service Catalog</a>
+                </div>
+            </li>
+            <li class="me-2">
+                <img src="assets/images/help.PNG" class="me-1">
+                <p class="m-0">Help</p>
+            </li>
+        </ul>
+    </div>
+    <div class="container-type" style="padding: 0 25px ;">
+        <div class="cloud-provider">
+            <img src="assets/images/cloud-provider.jpg" alt="cloud-provider">
+        </div>
+        <div class="service-company d-flex flex-wrap">
+            <div class="company-card">
+                <p class="mb-0">Compute On Demand-<br>vCenter</p>
+                <img src="assets/images/v-center.png">
+            </div>
+            <div class="company-card">
+                <p class="mb-0">Amazon Web Service<br></p>
+                <img src="assets/images/amazon.png">
+            </div>
+            <div class="company-card" id="step-first">
+                <p class="mb-0">Microsoft Azure</p>
+                <img src="assets/images/microsoft.png">
+            </div>
+            <div class="company-card">
+                <p class="mb-0">Google Cloud Platform</p>
+                <img src="assets/images/google-cloud.jpg">
+            </div>
+        </div>
+        <div class="service-company-proceed text-right">
+            <a href="4.html" class="btn btn-dark" id="second-step">Proceed</a>
+        </div>
+    </div>
+    <div class="copyright" style="background-color:#0077b5;padding: 10px 40px;color: #fff;">
+        <p class="mb-0">Copyright © 2013, 2022 HCL Technologies Limited</p>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/shepherd.min.js"></script>
+<script>
+    const tour = new Shepherd.Tour({
+    useModalOverlay: true,
+    defaultStepOptions: {
+      classes: 'shadow-md bg-purple-dark',
+      scrollTo: false
+    }
+  });
+  tour.addSteps([
+    {
+        arrow: false,
+        text: "Pick a provider to spin up your virtual machine",
+        attachTo: {
+        element: '#step-first',
+        on: 'bottom',
+        },
+        classes: 'btn-none',
+        buttons: [
+            {
+            text: 'Next',
+            action: tour.next
+            }
+        ], 
+        highlightClass: 'highlight-layer', 
+        when: {
+        show: () => {
+                $('#step-first').on('click', function(){
+                    $(this).addClass('active');
+                    $('.shepherd-element.btn-none button').click();
+                });
+            }
+          },
+        modalOverlayOpeningPadding: 5
+    },
+    {
+        arrow: false,
+        text: "Click on proceed to move further",
+        attachTo: {
+            element: '#second-step',
+            on: 'left',
+        },
+        highlightClass: 'highlight-layer',
+        modalOverlayOpeningPadding: 2
+    }
+  ]);
+  tour.addStep({
+    arrow: false,
+    text: "Welcome to MyCloud! Keeping your cloud services organized is what we do :)",
+    attachTo: {
+      element: '#main-first',
+      on: 'top',
+    },
+    classes: 'example-step-extra-class',
+    buttons: [
+        {
+        text: 'Next',
+        action: tour.next
+        }
+    ],
+    modalOverlayOpeningPadding: 0
+  });
+tour.start();
+</script>
+</body>
+</html>
